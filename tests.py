@@ -23,11 +23,11 @@ app = Tests(contexts=[appcontext])
 
 @app.test
 def url_for_stylesheet():
-    assert url_for('stylesheet', filename='main.css') == '/stylesheets/main.css'
+    assert url_for('stylesheet', name='main') == '/stylesheets/main.css'
 
 
 @app.test
 @get('/stylesheets/main.css')
 def compiles_on_get(response):
-    compiled = '.selector a{display:block}.selector strong{color:#00f}'
+    compiled = '.selector a{display:block}.selector strong{color:#00f}\n'
     assert response == Response(compiled, mimetype='text/css')
