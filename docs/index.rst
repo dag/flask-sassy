@@ -4,7 +4,7 @@ Flask-Sassy
 ::
 
     sassy = Sassy(app)
-    url_for('stylesheet', filename='main.css')  #=> /stylesheets/main.css
+    url_for('stylesheet', name='main')  #=> /stylesheets/main.css
 
 Sassy stylesheets are located in ``stylesheets/`` next to the similar
 ``static/`` and ``templates/`` directories. They are exposed over HTTP from
