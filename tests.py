@@ -29,5 +29,13 @@ def url_for_stylesheet():
 @app.test
 @get('/stylesheets/main.css')
 def compiles_on_get(response):
-    compiled = '.selector a{display:block}.selector strong{color:#00f}\n'
+    compiled = '''\
+.selector a {
+  display: block;
+}
+.selector strong {
+  color: #0000ff;
+}
+
+'''
     assert response == Response(compiled, mimetype='text/css')

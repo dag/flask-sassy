@@ -7,6 +7,7 @@ class Sassy(object):
 
     def init_app(self, app):
         self.compiler = Scss()
+        self.compiler.scss_opts.update(compress=False)
         self.app = app
         self.directory = path.join(app.root_path, 'stylesheets')
         app.add_url_rule('/stylesheets/<path:name>.css',
