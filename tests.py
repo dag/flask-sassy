@@ -30,6 +30,10 @@ def url_for_stylesheet():
 @get('/stylesheets/main.css')
 def compiles_on_get(response):
     compiled = '''\
+#navbar {
+  border-bottom-color: #ce4dd6;
+  border-bottom-style: solid;
+}
 .selector a {
   display: block;
 }
