@@ -1,3 +1,5 @@
+from __future__ import absolute_import
+
 from attest import assert_hook
 
 from flask import Flask, url_for, Response
